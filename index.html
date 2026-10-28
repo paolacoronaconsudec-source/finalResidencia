@@ -1,0 +1,177 @@
+<!doctype html><html><head><meta charset=utf8><meta name=viewport content="width=device-width,initial-scale=1,viewport-fit=cover"><style>:root{color-scheme:light;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}html{scroll-padding-top:env(safe-area-inset-top,0px)}body{margin:0;padding:0;font:14px -apple-system,BlinkMacSystemFont,sans-serif;background:#fff;color:#000}img{max-width:100%}[hidden]:not([hidden=until-found i]){display:none!important}</style></head><body>
+<title>Carpeta de Residencia I</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,650&family=Source+Sans+3:wght@400;600;700&display=swap">
+<style>
+/* Layout: horizontal infographic — seven stations on one line, joined by a connector, in the order of the final carpeta. Stacks vertically on phones. */
+:root{
+  --bg:#f4f6f9; --surface:#ffffff; --fg:#1c2330; --muted:#5b6677; --line:#d6dce5;
+  --accent:#1f5f8b; --accent-soft:#e2edf6; --theory:#7a4b8f; --theory-soft:#f1e7f6;
+  --display:"Fraunces",Georgia,"Times New Roman",serif;
+  --body:"Source Sans 3",system-ui,-apple-system,"Segoe UI",sans-serif;
+}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){
+  --bg:#12161c; --surface:#1b2129; --fg:#e7ebf1; --muted:#9ba6b5; --line:#2f3843;
+  --accent:#80b7dd; --accent-soft:#1d3142; --theory:#c99de2; --theory-soft:#2c2236; color-scheme:dark}}
+:root[data-theme="dark"]{
+  --bg:#12161c; --surface:#1b2129; --fg:#e7ebf1; --muted:#9ba6b5; --line:#2f3843;
+  --accent:#80b7dd; --accent-soft:#1d3142; --theory:#c99de2; --theory-soft:#2c2236; color-scheme:dark}
+*{box-sizing:border-box}
+body{background:var(--bg);color:var(--fg);font-family:var(--body);font-size:16px;line-height:1.45;
+  padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px));padding-block:32px 40px}
+.wrap{max-width:1240px;margin:0 auto;display:flex;flex-direction:column;gap:30px}
+header{text-align:center;display:flex;flex-direction:column;gap:6px;align-items:center}
+.eyebrow{font-size:.78rem;letter-spacing:.1em;text-transform:uppercase;color:var(--muted);font-weight:700;margin:0}
+h1{font-family:var(--display);font-weight:650;font-size:clamp(1.8rem,4vw,2.6rem);line-height:1.1;margin:0;text-wrap:balance}
+.lead{margin:0;color:var(--muted);max-width:60ch}
+
+ol.flow{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:repeat(7,minmax(0,1fr));gap:0;position:relative}
+.st{position:relative;display:flex;flex-direction:column;align-items:center;text-align:center;gap:10px;padding:0 6px}
+.st::before{content:"";position:absolute;top:31px;left:0;right:0;height:3px;background:var(--line);z-index:0}
+.st:first-child::before{left:50%}
+.st:last-child::before{right:50%}
+.dot{width:64px;height:64px;border-radius:50%;background:var(--surface);border:3px solid var(--accent);color:var(--accent);
+  display:grid;place-items:center;position:relative;z-index:1}
+.dot svg{width:28px;height:28px;fill:none;stroke:currentColor;stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round}
+.st.theory .dot{border-color:var(--theory);color:var(--theory);background:var(--theory-soft)}
+.n{font-size:.72rem;font-weight:700;letter-spacing:.08em;color:var(--muted);text-transform:uppercase}
+.st h2{font-family:var(--display);font-weight:500;font-size:1.04rem;line-height:1.2;margin:0;text-wrap:balance;min-height:2.5em}
+.btn{font:inherit;font-size:.86rem;font-weight:600;border:0;cursor:pointer;text-decoration:none;
+  padding:8px 12px;border-radius:999px;background:var(--accent);color:var(--surface);line-height:1.15;display:inline-flex;align-items:center;gap:5px}
+.st.theory .btn{background:var(--theory)}
+.btn:hover{filter:brightness(1.08)}
+.btn:focus-visible,.extra a:focus-visible{outline:2px solid var(--fg);outline-offset:2px}
+.extra{display:flex;flex-direction:column;gap:3px;font-size:.8rem}
+.extra a{color:var(--muted);text-decoration:underline;text-decoration-color:var(--line);text-underline-offset:3px}
+.extra a:hover{color:var(--accent)}
+
+.panel{background:var(--surface);border:1px solid var(--line);border-radius:12px;padding:20px 22px;max-width:640px;width:100%;margin:0 auto;display:flex;flex-direction:column;gap:12px}
+.panel h3{font-family:var(--display);font-weight:500;font-size:1.2rem;margin:0}
+.panel ul{margin:0;padding-left:1.2em;display:flex;flex-direction:column;gap:4px}
+.panel p{margin:0;color:var(--muted);font-size:.92rem}
+.sheet{border:1px dashed var(--line);border-radius:6px;padding:18px;text-align:center;display:flex;flex-direction:column;gap:3px;background:var(--bg)}
+.sheet .t{font-family:var(--display);font-weight:650;font-size:1.15rem}
+.sheet .m{color:var(--muted);font-size:.88rem}
+.close{align-self:flex-end;background:transparent;border:1px solid var(--line);color:var(--muted);border-radius:6px;padding:4px 10px;font:inherit;font-size:.82rem;cursor:pointer}
+
+@media (max-width:860px){
+  ol.flow{grid-template-columns:1fr;gap:22px}
+  .st{display:grid;grid-template-columns:64px 1fr;text-align:left;align-items:start;column-gap:14px;row-gap:6px;padding:0}
+  .st::before{top:0;bottom:-22px;left:31px;right:auto;width:3px;height:auto}
+  .st:first-child::before{left:31px;top:32px}
+  .st:last-child::before{display:none}
+  .dot{grid-row:1/span 4}
+  .st h2{min-height:0}
+  .st .btn{justify-self:start}
+}
+@media (prefers-reduced-motion:reduce){*{transition:none!important}}
+</style>
+
+<div class="wrap">
+  <header>
+    <p class="eyebrow">CONSUDEC · Residencia I · 2026</p>
+    <h1>Carpeta de Residencia I</h1>
+    <p class="lead">El orden de izquierda a derecha es el orden de la carpeta final. Cada botón abre el espacio de entrega correspondiente.</p>
+  </header>
+
+  <ol class="flow">
+    <li class="st">
+      <div class="dot"><svg viewBox="0 0 24 24"><rect x="5" y="3" width="14" height="18" rx="1.5"/><path d="M9 8h6M9 12h6M9 16h4"/></svg></div>
+      <span class="n">Paso 1</span>
+      <h2>Carátula</h2>
+      <button class="btn" type="button" id="b-caratula" aria-expanded="false" aria-controls="p-caratula">Ver datos</button>
+    </li>
+
+    <li class="st">
+      <div class="dot"><svg viewBox="0 0 24 24"><circle cx="12" cy="10" r="5"/><path d="M9 14.5 8 21l4-2 4 2-1-6.5"/><path d="m10 10 1.5 1.5L14 9"/></svg></div>
+      <span class="n">Paso 2</span>
+      <h2>Validación de horas</h2>
+      <a class="btn" href="https://campusconsudec.quinttos.com/mod/assign/view.php?id=76008" target="_blank" rel="noopener">Entregar ↗</a>
+    </li>
+
+    <li class="st theory">
+      <div class="dot"><svg viewBox="0 0 24 24"><path d="M4 5.5C6.5 4 9.5 4 12 6c2.5-2 5.5-2 8-.5V19c-2.5-1.5-5.5-1.5-8 .5-2.5-2-5.5-2-8-.5Z"/><path d="M12 6v13.5"/></svg></div>
+      <span class="n">Paso 3 · TP II</span>
+      <h2>Desarrollo teórico de investigación y devolución a las escuelas</h2>
+      <a class="btn" href="https://campusconsudec.quinttos.com/mod/assign/view.php?id=76016" target="_blank" rel="noopener">Entregar TP II ↗</a>
+    </li>
+
+    <li class="st">
+      <div class="dot"><svg viewBox="0 0 24 24"><path d="M2.5 12S6 5.5 12 5.5 21.5 12 21.5 12 18 18.5 12 18.5 2.5 12 2.5 12Z"/><circle cx="12" cy="12" r="3"/></svg></div>
+      <span class="n">Paso 4</span>
+      <h2>Planilla de observación de clases</h2>
+      <a class="btn" href="https://campusconsudec.quinttos.com/mod/assign/view.php?id=76012" target="_blank" rel="noopener">Entregar ↗</a>
+      <div class="extra">
+        <a href="https://campusconsudec.quinttos.com/mod/url/view.php?id=85171" target="_blank" rel="noopener">Aplicación de registro</a>
+        <a href="https://campusconsudec.quinttos.com/mod/url/view.php?id=85172" target="_blank" rel="noopener">Tutorial</a>
+      </div>
+    </li>
+
+    <li class="st">
+      <div class="dot"><svg viewBox="0 0 24 24"><rect x="4" y="5" width="16" height="15" rx="1.5"/><path d="M4 9.5h16M8.5 3v4M15.5 3v4M8 13.5h3M8 16.5h6"/></svg></div>
+      <span class="n">Paso 5</span>
+      <h2>Plan de clase</h2>
+      <a class="btn" href="https://campusconsudec.quinttos.com/mod/assign/view.php?id=76013" target="_blank" rel="noopener">Entregar ↗</a>
+      <div class="extra">
+        <a href="https://campusconsudec.quinttos.com/mod/url/view.php?id=85634" target="_blank" rel="noopener">Aplicación para planes</a>
+        <a href="https://campusconsudec.quinttos.com/mod/resource/view.php?id=85635" target="_blank" rel="noopener">Plan de clase vacío</a>
+      </div>
+    </li>
+
+    <li class="st">
+      <div class="dot"><svg viewBox="0 0 24 24"><circle cx="9" cy="8" r="3.2"/><path d="M3.5 19.5c.6-3.3 3-5 5.5-5s4.9 1.7 5.5 5"/><path d="M15.5 6.5h5M15.5 10h5M17 13.5h3.5"/></svg></div>
+      <span class="n">Paso 6</span>
+      <h2>Planilla del coformador</h2>
+      <a class="btn" href="https://campusconsudec.quinttos.com/mod/assign/view.php?id=86312" target="_blank" rel="noopener">Entregar ↗</a>
+      <div class="extra">
+        <a href="https://campusconsudec.quinttos.com/mod/url/view.php?id=86310" target="_blank" rel="noopener">Aplicación del coformador</a>
+        <a href="https://campusconsudec.quinttos.com/mod/resource/view.php?id=86311" target="_blank" rel="noopener">Planilla vacía</a>
+      </div>
+    </li>
+
+    <li class="st">
+      <div class="dot"><svg viewBox="0 0 24 24"><rect x="5" y="3.5" width="14" height="17" rx="1.5"/><path d="m8.5 9 1.5 1.5L12.5 8M8.5 15l1.5 1.5 2.5-2.5M14.5 9.5h1.5M14.5 15.5h1.5"/></svg></div>
+      <span class="n">Paso 7</span>
+      <h2>Asistencia a observaciones y residencias</h2>
+      <a class="btn" href="https://campusconsudec.quinttos.com/mod/assign/view.php?id=85636" target="_blank" rel="noopener">Entregar ↗</a>
+      <div class="extra">
+        <a href="https://campusconsudec.quinttos.com/mod/url/view.php?id=85404" target="_blank" rel="noopener">Planillas de asistencia</a>
+      </div>
+    </li>
+  </ol>
+
+  <section class="panel" id="p-caratula" hidden aria-labelledby="h-caratula">
+    <button class="close" type="button" id="x-caratula">Cerrar</button>
+    <h3 id="h-caratula">Datos de la carátula</h3>
+    <ul>
+      <li>Logo institucional</li>
+      <li>Título: Carpeta de Residencia I</li>
+      <li>Nombre y apellido del estudiante</li>
+      <li>DNI</li>
+      <li>Correo electrónico</li>
+      <li>Materia: Residencia I</li>
+      <li>Año: 2026</li>
+      <li>Cuatrimestre</li>
+    </ul>
+    <div class="sheet" aria-label="Ejemplo de carátula">
+      <span class="m">[Logo]</span>
+      <span class="t">Carpeta de Residencia I</span>
+      <span>Nombre y Apellido</span>
+      <span class="m">DNI · correo@ejemplo.com</span>
+      <span>Residencia I</span>
+      <span class="m">2026 · Cuatrimestre</span>
+    </div>
+    <p>La carátula lleva solo estos datos.</p>
+  </section>
+</div>
+
+<script>
+(function(){
+  const b=document.getElementById('b-caratula'),p=document.getElementById('p-caratula'),x=document.getElementById('x-caratula');
+  function set(open){p.hidden=!open;b.setAttribute('aria-expanded',String(open));b.textContent=open?'Ocultar datos':'Ver datos';if(open)p.scrollIntoView({behavior:'smooth',block:'nearest'});}
+  b.addEventListener('click',()=>set(p.hidden));
+  x.addEventListener('click',()=>{set(false);b.focus();});
+})();
+</script>
+
+</body></html>
